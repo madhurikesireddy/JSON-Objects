@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var day=[
+			{
+	            "% RETI Adoption": 98.36,
+	            "Total Dev Escape [%]": 10,
+	            "Total Test Escape [TTE %]": 65,
+	            "URC MTTR": 37.07,
+	            "CFD MTTR - Average Outstanding": 24.57,
+	            "SS MTTR - Average Outstanding": 6.01,
+	            "TS MTTR - Average Outstanding": 6.01,
+	            "RG": 118,
+	            "URC": 69,
+	            "S123 Backlog": 1158,
+	            "CFD Backlog": 147,
+	            "PSIRT - Critical": 1,
+	            "PSIRT - High": 1,
+	            "S12 Autons Backlog": 9,
+	            "S3 Autons Backlog": 136,
+	            "% RETI Adoption_trend": "Up",
+	            "Total Dev Escape [%]_trend": "Up",
+	            "Total Test Escape [TTE %]_trend": "Up",
+	            "URC MTTR_trend": "Up",
+	            "CFD MTTR - Average Outstanding_trend": "Up",
+	            "SS MTTR - Average Outstanding_trend": "Up",
+	            "TS MTTR - Average Outstanding_trend": "Up",
+	            "RG_trend": "Up",
+	            "URC_trend": "Down",
+	            "S123 Backlog_trend": "Up",
+	            "CFD Backlog_trend": "Up",
+	            "PSIRT - Critical_trend": "Down",
+	            "PSIRT - High_trend": "Down",
+	            "S12 Autons Backlog_trend": "Up",
+	            "S3 Autons Backlog_trend": "Down",
+	            "ViewName": "1661 RelView"
+	        },
+			{
+	            "% RETI Adoption": 97.36,
+	            "Total Dev Escape [%]": 10,
+	            "Total Test Escape [TTE %]": 65,
+	            "URC MTTR": 37.07,
+	            "CFD MTTR - Average Outstanding": 24.57,
+	            "SS MTTR - Average Outstanding": 6.01,
+	            "TS MTTR - Average Outstanding": 6.01,
+	            "RG": 118,
+	            "URC": 69,
+	            "S123 Backlog": 1158,
+	            "CFD Backlog": 147,
+	            "PSIRT - Critical": 1,
+	            "PSIRT - High": 1,
+	            "S12 Autons Backlog": 9,
+	            "S3 Autons Backlog": 136,
+	            "% RETI Adoption_trend": "Up",
+	            "Total Dev Escape [%]_trend": "Up",
+	            "Total Test Escape [TTE %]_trend": "Up",
+	            "URC MTTR_trend": "Up",
+	            "CFD MTTR - Average Outstanding_trend": "Up",
+	            "SS MTTR - Average Outstanding_trend": "Up",
+	            "TS MTTR - Average Outstanding_trend": "Up",
+	            "RG_trend": "Up",
+	            "URC_trend": "Down",
+	            "S123 Backlog_trend": "Up",
+	            "CFD Backlog_trend": "Up",
+	            "PSIRT - Critical_trend": "Down",
+	            "PSIRT - High_trend": "Down",
+	            "S12 Autons Backlog_trend": "Up",
+	            "S3 Autons Backlog_trend": "Down",
+	            "ViewName": "Sri"
+	        },
+			{
+	            "% RETI Adoption": 90.36,
+	            "Total Dev Escape [%]": 10,
+	            "Total Test Escape [TTE %]": 65,
+	            "URC MTTR": 37.07,
+	            "CFD MTTR - Average Outstanding": 24.57,
+	            "SS MTTR - Average Outstanding": 6.01,
+	            "TS MTTR - Average Outstanding": 6.01,
+	            "RG": 118,
+	            "URC": 69,
+	            "S123 Backlog": 1158,
+	            "CFD Backlog": 147,
+	            "PSIRT - Critical": 1,
+	            "PSIRT - High": 1,
+	            "S12 Autons Backlog": 9,
+	            "S3 Autons Backlog": 136,
+	            "% RETI Adoption_trend": "Up",
+	            "Total Dev Escape [%]_trend": "Up",
+	            "Total Test Escape [TTE %]_trend": "Up",
+	            "URC MTTR_trend": "Up",
+	            "CFD MTTR - Average Outstanding_trend": "Up",
+	            "SS MTTR - Average Outstanding_trend": "Up",
+	            "TS MTTR - Average Outstanding_trend": "Up",
+	            "RG_trend": "Up",
+	            "URC_trend": "Down",
+	            "S123 Backlog_trend": "Up",
+	            "CFD Backlog_trend": "Up",
+	            "PSIRT - Critical_trend": "Down",
+	            "PSIRT - High_trend": "Down",
+	            "S12 Autons Backlog_trend": "Up",
+	            "S3 Autons Backlog_trend": "Down",
+	            "ViewName": "Sri1"
+	        }
+			
+];
+
+
+var d = [];
+for(var i=0; i < day.length; i++){
+	d.push(day[i].ViewName);
+};
+
+alert(JSON.stringify(d));
+
+var kk = [];
+for(var s in day[0]){
+kk.push(s);
+}
+
+
+
+
+
+var datamain = [];
+for(var dd=0; dd < kk.length; dd++){
+var dataObj = {'matrix': '' };
+dataObj.matrix = kk[dd];
+	for(var f=0; f < day.length; f++){
+		for(var x=0; x < d.length; x++){
+			if(day[f].ViewName == d[x]){
+				dataObj['value'+x] = day[f][kk[dd]];
+			}
+		};
+
+	}
+
+
+console.log(kk[dd]);
+datamain.push(dataObj);
+};
+
+alert(JSON.stringify(datamain));
+
+
+</script>
+
+</body>
+</html>

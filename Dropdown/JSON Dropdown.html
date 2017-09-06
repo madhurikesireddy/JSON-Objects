@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+  <head>
+    <script data-require="angular.js@1.5.11" data-semver="1.5.11" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.11/angular.min.js"></script>
+   
+  <script src=" https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    
+    <div ng-controller="mainCtrl">
+      
+     Country Name :   <select 
+      ng-options="option.id for option in countryName"
+      ng-model="data.selectedOption"></select>
+      
+      NetworkName :    <select 
+      ng-options="option.id for option in networkName"
+      ng-model="d"></select><br>
+      
+      segment :    <select 
+      ng-options="option.id for option in segment"
+      ng-model="e"></select>
+      
+      
+      product_family :    <select 
+      ng-options="option.id for option in product_family"
+      ng-model="f"></select>
+      
+       contract_number :    <select 
+      ng-options="option.id for option in contract_number"
+      ng-model="g"></select>
+      
+       theater :    <select 
+      ng-options="option.id for option in theater"
+      ng-model="h"></select>
+      
+       default_flag :    <select 
+      ng-options="option.id for option in default_flag"
+      ng-model="i"></select>
+      
+      
+    </div>
+   
+  </body>
+
+</html>
